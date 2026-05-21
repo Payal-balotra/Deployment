@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                          /* Modern JavaScript features */
+    "module": "NodeNext",                        /* Handles modern ES modules */
+    "moduleResolution": "NodeNext",              
+    "outDir": "./dist",                          /* Output folder for production build */
+    "rootDir": "./src",                          /* Source folder for TS files */
+    "strict": true,                              /* Enable strict type checking */
+    "esModuleInterop": true                      /* Compatibility with commonjs modules */
+  },
+  "include": ["src/**/*"]
+}
