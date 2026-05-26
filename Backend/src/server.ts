@@ -18,8 +18,8 @@ app.get("/api/message", (req, res) => {
 
 app.get("/", async (req, res) => {
   try {
-    const result = await pool.query("SELECT NOW()");
-    res.json({ status: "connected", timestamp: result.rows[0] });
+    // const result = await pool.query("SELECT NOW()");
+    res.json({ status: "connected", message: "this is front page " });
   } catch (err: any) {
     res.status(500).json({ status: "error", error: err.message });
   }
@@ -132,7 +132,7 @@ app.delete("/api/users/:id", async (req, res) => {
     const user = await prisma.user.delete({
       where: { id: Number(id) },
     });
-    
+
     res.json({ message: "User deleted successfully", user });
   } catch (err: any) {
     if (err.code === "P2025") { // Prisma record not found
@@ -142,6 +142,6 @@ app.delete("/api/users/:id", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log("Server running on port 3001");
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
 });
