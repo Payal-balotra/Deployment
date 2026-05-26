@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node"],                           /* Include type definitions for Node.js */
     "target": "ES2022",                          /* Modern JavaScript features */
     "module": "NodeNext",                        /* Handles modern ES modules */
     "moduleResolution": "NodeNext",              
