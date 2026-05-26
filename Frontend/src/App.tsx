@@ -29,7 +29,7 @@ function App() {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   // Base API URL
-  const API_URL = "http://localhost:3001/api/users";
+  const API_URL = "/api/users";
 
   // Trigger alert toast
   const addToast = (message: string, type: "success" | "error" = "success") => {
